@@ -20,7 +20,6 @@
 		<link rel="stylesheet" href="dist/theme/night.css" id="theme">
 
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
 
 	</head>
 
@@ -178,9 +177,7 @@
 				progress: true,
 				center: true,
 				hash: true,
-				dependencies: [ { src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } }
-
-				],
+				
 				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard ]
 			});
 

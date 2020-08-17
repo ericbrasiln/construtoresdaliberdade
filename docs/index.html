@@ -199,7 +199,71 @@
 					</section>
 
 					<section>
+						<h4>Quando a cor aparece no jornal?</h4>
+						<p>77% em relatos de eventos violentos e conflituosos (como crimes, agressões, brigas)</p>
+						<p>13% em representações em carros de idéias das Grandes Sociedades Carnavalescas, alguns fantasiados e integrantes de Cucumbis</p>
+					</section>
+
+					<section>
+						<p>os jornalistas cariocas evitam racializar as suas críticas às práticas e formas do carnaval das ruas, mantendo seus argumentos no campo da cultura, ressaltando a “incivilização” e a “barbárie” do “povo”, do “Zé-Povinho”, por falta de acesso aos bens culturais trazidos pelo progresso – representados no carnaval pelas Grandes Sociedades Carnavalescas de inspiração europeia.</p>
+					</section>
+
+					<section>
+						<h4>Jornal do Commercio</h4>
+						<p>28 registros durante o carnaval com a racialização dos sujeitos: 23 eram <em>pretos</em> (seis escravos), dois <em>pardos</em> (um escravo), um <em>mulato</em> e dois <em>crioulos</em>. Todos estavam envolvidos em algum tipo de ação violenta.</p>
+					</section>
+
+					<section>
+						<h4>Gazeta da Tarde</h4>
+						<p>6 ocasiões onde utiliza referências à cor. Dentre eles nenhum escravizado, dois pretos, um pardo e três negros. Apenas um tratava de agressão física.</p>
+					</section>
+
+					<section>
 						<h4>Prisões nas fontes da Casa de Detenção?</h4>
+						<small>Arquivo Público do Estado do Rio de Janeiro</small>
+					</section>
+
+					<section>
+						<div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+						<h4>Presos no Carnaval - cor</h4>
+						<canvas class="stretch chartjs-render-monitor" data-chart="line" style="height: 510px; width: 960px; display: block;" width="960" height="480">
+							Pretos/Pardos/Fulas,48,49,47,53,51,55
+							Brancos,50,40,40,40,40,36
+							Morenos,2,10,12,6,7,7
+							Outros,0,1,1,1,2,2
+							<!-- 
+							{ 
+							"data" : {
+								"labels" : ["1879", "1881", "1883", "1885", "1887", "1888"],
+								"datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
+								}
+							}
+							-->
+						</canvas>
+					</section>
+
+					<section>
+						<div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+						<h4>Brasileiros presos no Carnaval - cor</h4>
+						<canvas class="stretch chartjs-render-monitor" data-chart="line" style="height: 510px; width: 960px; display: block;" width="960" height="480">
+							Pretos/Pardos/Fulas,70,72,60,81,71,78
+							Brancos,30,14,23,15,17,11
+							Morenos,0,13,16,3,9,8
+							Outros,0,1,1,1,3,3
+							<!-- 
+							{ 
+							"data" : {
+								"labels" : ["1879", "1881", "1883", "1885", "1887", "1888"],
+								"datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
+								}
+							}
+							-->
+						</canvas>
+					</section>
+
+					<section>
+						<h4>Repressão racializada, intensificada nos dias de carnaval.</h4>
+						<p>PQ???</p>
 					</section>
 				</section>
 
@@ -293,7 +357,8 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="plugin/chalkboard/plugin.js"></script>
-		<script src="plugin/title-footer/title-footer.js"></script>
+		<script src="plugin/chart/Chart.min.js"></script>
+		<script src="plugin/chart/plugin.js"></script>
 		<script>
 
 			Reveal.initialize({
@@ -309,10 +374,29 @@
         			readOnly: undefined,
 					boardmarkers : [
 					{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'}],
+				},
+					chart: {
+							defaults: {
+									global: {
+											title: { fontColor: "rgba(0,0,0,1)" },
+											legend: {
+													labels: { fontColor: "rgba(0,0,0,1)" },
+									},
+								},
+									scale: {
+											scaleLabel: { fontColor: "rgba(0,0,0,0.5)" },
+											gridLines: { color: "rgba(0,0,0,0.5)", zeroLineColor: "rgba(0,0,0,0.5)" },
+											ticks: { fontColor: "rgba(0,0,0,0.5)" },
+								}
+							},
+							line: { borderColor: [ "rgba(40,61,59,.8)" , "rgba(25,114,120,.8)", "rgba(196,69,54,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+							bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+							pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+							radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
 
 				},
 				
-				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard ]
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealChart ],
 			});
 
 		</script>

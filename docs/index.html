@@ -17,7 +17,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/night.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
 
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 
@@ -29,7 +29,7 @@
 			<div class="slides">
 				<section>
 					<section data-background = "imagens/1881-ed.241-RI-p.4-5.jpeg">
-						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 0, 0, 0.39); background-color: rgb(31, 31, 31); color: rgb(214, 214, 214); padding: 20px; font-size: 20px; text-align: left;">
+						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 5px 25px rgba(0, 0, 0, 0.39); background-color: rgb(246, 246, 246); color: rgb(10, 10, 10); padding: 20px; font-size: 20px; text-align: left;">
 							<h2>Construtores da liberdade</h2>
 							<p>comunidades, lutas e identidades negras no Brasil do século XIX</p>
 							<p>2021-10-13</p>
@@ -218,7 +218,7 @@
 					<section>
 						<div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
 						<h4>Presos no Carnaval - cor</h4>
-						<canvas class="stretch chartjs-render-monitor" data-chart="line" style="height: 510px; width: 960px; display: block;" width="960" height="480">
+						<canvas class="stretch chartjs-render-monitor" data-chart="line" width="960" height="480">
 							Pretos/Pardos/Fulas,48,49,47,53,51,55
 							Brancos,50,40,40,40,40,36
 							Morenos,2,10,12,6,7,7
@@ -227,7 +227,7 @@
 							{ 
 							"data" : {
 								"labels" : ["1879", "1881", "1883", "1885", "1887", "1888"],
-								"datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
+								"datasets" : [{ "borderColor": "#0f0", "borderDash": ["4","10"] }, { "borderColor": "#0ff" } ]
 								}
 							}
 							-->
@@ -237,7 +237,7 @@
 					<section>
 						<div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
 						<h4>Brasileiros presos no Carnaval - cor</h4>
-						<canvas class="stretch chartjs-render-monitor" data-chart="line" style="height: 510px; width: 960px; display: block;" width="960" height="480">
+						<canvas class="stretch chartjs-render-monitor" data-chart="line" width="960" height="480">
 							Pretos/Pardos/Fulas,70,72,60,81,71,78
 							Brancos,30,14,23,15,17,11
 							Morenos,0,13,16,3,9,8
@@ -246,7 +246,7 @@
 							{ 
 							"data" : {
 								"labels" : ["1879", "1881", "1883", "1885", "1887", "1888"],
-								"datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
+								"datasets" : [{ "borderColor": "#0f0", "borderDash": ["4","10"] }, { "borderColor": "#0ff" } ]
 								}
 							}
 							-->
@@ -502,9 +502,13 @@
 						<br>
 						<small><a href="http://memoria.bn.br/DocReader/332747/2870">Revista Illustrada, 28/02/1885</a></small>
 					</section>
-
+					<section>
+						<h5>Gazeta de Notícias, 23/02;1885, p. 3</h5>
+						<img class="r-stretch" src="imagens/cucumby_GN_1885.png">
+						<br>
+						<small><a href="http://memoria.bn.br/docreader/103730_02/8277">Hyperlink para a fonte.</a></small>
+					</section>
 				</section>
-
 				<section>
 					<section>
 						<h3>De volta ao princípio:</h3>				
@@ -564,7 +568,11 @@
 						<h5><a href="https://ericbrasiln.github.io/Sociedades-Carnavalescas-RJ/">Banco de dados Sociedades Carnavalescas on-line</a></h5>
 					</section>
 				</section>
-				
+				<section style="text-align: center;">					
+					<h3>Algumas referências</h3>
+					<p>Listei algumas referências que podem ser de interesse: <a href="assets/refs.html">clique aqui</a></p>
+				</section>
+
 				<section style="text-align: center;">					
 					<h3>Contatos</h3> 
 					<ul>
@@ -616,9 +624,9 @@
 				chart: {
 						defaults: {
 								global: {
-										title: { fontColor: "#FFF" },
+										title: { fontColor: "black" },
 										legend: {
-												labels: { fontColor: "#FFF" },
+												labels: { fontColor: "black" },
 								},
 							},
 								scale: {
@@ -629,7 +637,7 @@
 						},
 						line: { borderColor: [ "rgba(40,61,59,.8)" , "rgba(25,114,120,.8)", "rgba(196,69,54,.8)" ], "borderDash": [ [5,10], [0,0] ]},
 						bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
-						pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+						pie: { backgroundColor: [ "rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)"]},
 						radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
 
 				},
